@@ -13,10 +13,27 @@ public class User {
     private Integer id;
 
     private String username;
-
     private String hashedPassword;
-
     private Integer points;
+    private String email;
+
+    public User() {
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public User(String username, String hashedPassword, String email) {
+        this.username = username;
+        this.hashedPassword = hashedPassword;
+        this.email = email;
+        this.points = 0;
+    }
 
     public Integer getId() {
         return id;

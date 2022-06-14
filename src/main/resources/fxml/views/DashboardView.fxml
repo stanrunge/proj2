@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" stylesheets="@../../css/styles.css" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TextField layoutX="175.0" layoutY="101.0" />
+      <Label fx:id="loggedInAsLabel" layoutX="33.0" layoutY="31.0" text="Logged in as USERNAME" />
+      <Label fx:id="currentPointsLabel" layoutX="33.0" layoutY="48.0" text="Current points: POINTS" />
+   </children>
+</AnchorPane>

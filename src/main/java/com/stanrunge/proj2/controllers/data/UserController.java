@@ -1,6 +1,6 @@
-package com.stanrunge.proj2.controllers;
+package com.stanrunge.proj2.controllers.data;
 
-import com.stanrunge.proj2.UserRepository;
+import com.stanrunge.proj2.repositories.UserRepository;
 import com.stanrunge.proj2.data.User;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
@@ -16,18 +16,12 @@ public class UserController {
 
     @PostMapping("/")
     @ResponseStatus(HttpStatus.CREATED)
-    public void createUser() {
-        userRepository.save(new User());
+    public void createUser(User user) {
+        userRepository.save(user);
     }
 
     @GetMapping("/")
-    public User getUserByUsername(String username) {
-        Iterable<User> users = userRepository.findAll();
-        for (User user : users) {
-            if (user.getUsername().equals(username)) {
-                return user;
-            }
-        }
-        return null;
+    public Iterable<User> getUsers() {
+        return userRepository.findAll();
     }
 }
