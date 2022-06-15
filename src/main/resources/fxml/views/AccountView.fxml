@@ -1,14 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.stanrunge.proj2.controllers.views.AccountController"
-            prefHeight="400.0" prefWidth="600.0">
 
+<AnchorPane prefHeight="400.0" prefWidth="600.0" stylesheets="@../../css/styles.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.stanrunge.proj2.controllers.views.AccountController">
+   <children>
+      <Label fx:id="usernameLabel" layoutX="22.0" layoutY="24.0" text="Username:" />
+      <Label fx:id="emailLabel" layoutX="22.0" layoutY="47.0" text="E-mail:" />
+      <Label fx:id="currentPointsLabel" layoutX="22.0" layoutY="95.0" text="Current points: " />
+      <Label layoutX="397.0" layoutY="33.0" text="Change password:" />
+      <PasswordField fx:id="changePasswordField" layoutX="397.0" layoutY="50.0" />
+      <Label layoutX="397.0" layoutY="93.0" text="Re-enter changed password:" />
+      <PasswordField fx:id="reEnterChangedPasswordField" layoutX="397.0" layoutY="110.0" />
+   </children>
 </AnchorPane>
