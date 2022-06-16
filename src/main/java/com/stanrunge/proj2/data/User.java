@@ -16,6 +16,15 @@ public class User {
     private String hashedPassword;
     private Integer points;
     private String email;
+    private String profilePicUrl;
+
+    public String getProfilePicUrl() {
+        return profilePicUrl;
+    }
+
+    public void setProfilePicUrl(String profilePicUrl) {
+        this.profilePicUrl = profilePicUrl;
+    }
 
     public User() {
     }
