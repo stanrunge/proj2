@@ -264,11 +264,11 @@
 }
 
 .check-box:indeterminate {
-    -fx-padding: 0 0 0 0;
+    -fx-padding: 0;
 }
 
 .check-box:indeterminate > .text {
-    -fx-padding: 0 0 0 0;
+    -fx-padding: 0;
 }
 
 
@@ -369,7 +369,7 @@
 
 .menu-item {
     -fx-background-radius: 0;
-    -fx-padding: 0em 0em 0em 0em;
+    -fx-padding: 0em;
     -fx-text-fill: black;
     -fx-background: #c7c7c7;
 }
@@ -408,7 +408,7 @@
 
 .progress-bar .track {
     -fx-text-box-border: white;
-    -fx-control-inner-background: #f7f7f7;;
+    -fx-control-inner-background: #f7f7f7;
 }
 
 
@@ -457,7 +457,7 @@
     -fx-background-insets: 2;
     -fx-background-color: #f8f8f8;
     -fx-border-width: 0;
-    -fx-padding: 0 0 0 0;
+    -fx-padding: 0;
 }
 
 
@@ -607,7 +607,7 @@
     -fx-background-color: #2D2D30;
     -fx-border-color: #3E3E42;
     -fx-border-radius: 0;
-    -fx-border-width: 3 2 2 2;
+    -fx-border-width: 3 2 2;
 }
 
 
@@ -731,7 +731,7 @@
 }
 
 .spinner .increment-arrow-button{
-    -fx-border-style: solid solid none solid;
+    -fx-border-style: solid solid none;
     /* -fx-border-color: #7a7a7a #7a7a7a #7a7a7a #7a7a7a; */
 }
 .spinner .decrement-arrow-button {
@@ -772,7 +772,7 @@
 .radio-button {
     /* 0 0 0 5 */
     -fx-text-fill: -fx-text-background-color;
-    -fx-padding: 0 0 .5 0;
+    -fx-padding: 0 0 .5;
 }
 
 .radio-button>.radio,
@@ -781,7 +781,7 @@
     -fx-border-radius: 1em;
     -fx-background-radius: 1.0em;
     /* large value to make sure this remains circular */
-    -fx-padding: 1 2 3 2;
+    -fx-padding: 1 2 3;
     -fx-background-color: white;
 }
 
@@ -1041,7 +1041,7 @@
     -fx-background-color: #ffffff;
     -fx-border-width: 1px;
     -fx-border-color: black;
-    -fx-border-style: none solid solid solid;
+    -fx-border-style: none solid solid;
     -fx-border-radius: 2px;
 }
 
