@@ -1,29 +1,23 @@
 package com.stanrunge.proj2.controllers.components;
 
-import com.stanrunge.proj2.controllers.views.DashboardController;
-import com.stanrunge.proj2.data.User;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.stage.Stage;
-import org.springframework.context.ApplicationContext;
+import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 
 public class MenuController {
 
-    ApplicationContext applicationContext;
-    User user;
+    @FXML
+    private Button accountButton;
 
-//    void changeView() {
-//        DashboardController dashboardController = applicationContext.getBean(DashboardController.class);
-//        dashboardController.setCurrentUser(user);
-//
-//        Stage stage = (Stage) registerButton.getScene().getWindow();
-//        FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/views/DashboardView.fxml"));
-//        loader.setController(dashboardController);
-//        loader.setControllerFactory(applicationContext::getBean);
-//        Parent root = loader.load();
-//        Scene scene = new Scene(root);
-//        stage.setScene(scene);
-//    }
+    @FXML
+    private Button dashboardButton;
+
+    @FXML
+    private Button leaderboardButton;
+
+    @FXML
+    private Button rewardsButton;
+
+    @FXML
+    private Button settingsButton;
 
 }
