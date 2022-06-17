@@ -10,5 +10,5 @@
             xmlns:fx="http://javafx.com/fxml"
             fx:controller="com.stanrunge.proj2.controllers.views.SettingsController"
             prefHeight="400.0" prefWidth="600.0">
-
+    <fx:include fx:id="menu" source="components/MenuView.fxml"></fx:include>
 </AnchorPane>

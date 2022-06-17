@@ -7,12 +7,14 @@ import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.stage.FileChooser;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.stereotype.Component;
 
+@Component
 public class AccountController {
 
     User currentUser;
 
-    AccountController(User currentUser) {
+    public void setCurrentUser(User currentUser) {
         this.currentUser = currentUser;
         currentPointsLabel.setText("Current points: " + currentUser.getPoints());
         emailLabel.setText("Email: " + currentUser.getEmail());

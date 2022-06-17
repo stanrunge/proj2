@@ -1,14 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.stanrunge.proj2.controllers.views.LeaderboardController"
-            prefHeight="400.0" prefWidth="600.0">
 
+<AnchorPane prefHeight="400.0" prefWidth="600.0" stylesheets="@../../css/styles.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.stanrunge.proj2.controllers.views.LeaderboardController">
+   <children>
+      <Label text="Leaderboard:" />
+      <TableView fx:id="leaderboardTable" layoutY="21.0" prefHeight="380.0" prefWidth="600.0">
+        <columns>
+            <TableColumn fx:id="profilePictureColumn" prefWidth="99.0" text="Profile picture" />
+          <TableColumn fx:id="usernameColumn" prefWidth="243.0" text="Username" />
+          <TableColumn fx:id="pointsColumn" minWidth="7.0" prefWidth="257.0" text="Points" />
+        </columns>
+      </TableView>
+       <fx:include fx:id="menu" source="components/MenuView.fxml"></fx:include>
+   </children>
 </AnchorPane>

@@ -8,7 +8,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@../../css/styles.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.stanrunge.proj2.controllers.views.LoginController">
    <children>
-      <Label fx:id="errorLabel" layoutX="297.0" layoutY="27.0" prefHeight="17.0" prefWidth="0.0" textAlignment="CENTER" textFill="RED" />
+      <Label fx:id="errorLabel" layoutX="203.0" layoutY="28.0" prefHeight="17.0" prefWidth="195.0" text="Error label" textAlignment="CENTER" textFill="RED" />
       <Label layoutX="34.0" layoutY="36.0" text="Username" />
       <TextField fx:id="usernameField" layoutX="34.0" layoutY="53.0" />
       <Label layoutX="34.0" layoutY="93.0" text="Password" />

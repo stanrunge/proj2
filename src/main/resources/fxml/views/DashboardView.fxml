@@ -1,12 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" stylesheets="@../../css/styles.css" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" stylesheets="@../../css/styles.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <TextField layoutX="175.0" layoutY="101.0" />
+      <TextField fx:id="kilometersField" layoutX="33.0" layoutY="147.0" />
       <Label fx:id="loggedInAsLabel" layoutX="33.0" layoutY="31.0" text="Logged in as USERNAME" />
       <Label fx:id="currentPointsLabel" layoutX="33.0" layoutY="48.0" text="Current points: POINTS" />
+      <Label layoutX="33.0" layoutY="130.0" text="Kilometers:" />
+      <Button fx:id="submitButton" layoutX="33.0" layoutY="193.0" mnemonicParsing="false" text="Submit" />
+      <fx:include fx:id="menu" source="components/MenuView.fxml"></fx:include>
    </children>
 </AnchorPane>

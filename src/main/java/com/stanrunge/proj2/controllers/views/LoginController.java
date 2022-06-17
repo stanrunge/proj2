@@ -1,5 +1,6 @@
 package com.stanrunge.proj2.controllers.views;
 
+import com.stanrunge.proj2.SceneSwitcher;
 import com.stanrunge.proj2.repositories.UserRepository;
 import com.stanrunge.proj2.controllers.data.UserController;
 import com.stanrunge.proj2.data.User;
@@ -24,6 +25,7 @@ public class LoginController {
 
     private final UserController userController;
     private final ApplicationContext applicationContext;
+    private final SceneSwitcher sceneSwitcher;
 
     @FXML
     private Label errorLabel;
@@ -43,6 +45,12 @@ public class LoginController {
     public LoginController(UserRepository userRepository, ApplicationContext applicationContext) {
         this.userController = new UserController(userRepository);
         this.applicationContext = applicationContext;
+        sceneSwitcher = new SceneSwitcher(applicationContext);
+    }
+
+    @FXML
+    private void initialize() {
+        errorLabel.setText("");
     }
 
     @FXML
@@ -55,16 +63,8 @@ public class LoginController {
         Iterable<User> users = userController.getUsers();
         for (User user : users) {
             if (user.getUsername().equals(username) && encoder.matches(passwordField.getText(), user.getHashedPassword())) {
-                DashboardController dashboardController = applicationContext.getBean(DashboardController.class);
-                dashboardController.setCurrentUser(user);
-
-                Stage stage = (Stage) registerButton.getScene().getWindow();
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/views/DashboardView.fxml"));
-                loader.setController(dashboardController);
-                loader.setControllerFactory(applicationContext::getBean);
-                Parent root = loader.load();
-                Scene scene = new Scene(root);
-                stage.setScene(scene);
+                Stage stage = (Stage) logInButton.getScene().getWindow();
+                sceneSwitcher.switchScene(stage, "/fxml/views/DashboardView.fxml");
                 return;
             } else if (user.getUsername().equals(username) && !user.getHashedPassword().equals(hashedPassword)) {
                 errorLabel.setText("Wrong password");

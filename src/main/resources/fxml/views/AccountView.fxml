@@ -28,5 +28,6 @@
          </image>
       </ImageView>
       <Button fx:id="changeProfilePictureButton" layoutX="16.0" layoutY="354.0" mnemonicParsing="false" onAction="#changeProfilePicture" text="Change profile picture" />
+      <fx:include fx:id="menu" source="components/MenuView.fxml"></fx:include>
    </children>
 </AnchorPane>
