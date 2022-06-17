@@ -26,4 +26,9 @@ public class DashboardController {
         currentPointsLabel.setText("Current points: " + currentUser.getPoints());
     }
 
+    @FXML
+    private void submitKilometers() {
+
+    }
+
 }

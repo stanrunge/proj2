@@ -5,13 +5,13 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" stylesheets="@../../css/styles.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" stylesheets="@../../css/styles.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.stanrunge.proj2.controllers.views.DashboardController">
    <children>
       <TextField fx:id="kilometersField" layoutX="33.0" layoutY="147.0" />
       <Label fx:id="loggedInAsLabel" layoutX="33.0" layoutY="31.0" text="Logged in as USERNAME" />
       <Label fx:id="currentPointsLabel" layoutX="33.0" layoutY="48.0" text="Current points: POINTS" />
       <Label layoutX="33.0" layoutY="130.0" text="Kilometers:" />
-      <Button fx:id="submitButton" layoutX="33.0" layoutY="193.0" mnemonicParsing="false" text="Submit" />
-      <fx:include fx:id="menu" source="components/MenuView.fxml"></fx:include>
+      <Button fx:id="submitButton" layoutX="33.0" layoutY="193.0" mnemonicParsing="false" onAction="#submitKilometers" text="Submit" />
+      <fx:include fx:id="menu" source="components/MenuView.fxml" translateX="75.0" translateY="340.0" />
    </children>
 </AnchorPane>
