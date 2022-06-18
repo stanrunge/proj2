@@ -600,11 +600,6 @@
     /* -fx-background-color: transparent; */
 }
 
-.table-view .column-header {
-    -fx-background-color: white;
-    /* -fx-background-color: transparent; */
-}
-
 .table-view .column-resize-line {
 
     -fx-background-color: gray;
