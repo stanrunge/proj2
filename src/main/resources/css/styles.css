@@ -38,8 +38,6 @@
     -fx-border-width: 2;
 }
 
-.text-field:hover {}
-
 .text-field:focused {
     -fx-border-color: #007ACC;
 }
@@ -70,8 +68,6 @@
     -fx-padding: 2 4;
     -fx-shape: "M6.34317 7.75732L4.92896 9.17154L12 16.2426L19.0711 9.17157L17.6569 7.75735L12 13.4142L6.34317 7.75732Z";
 }
-
-.combo-box-base:hover {}
 
 .combo-box-base:focused {
     -fx-border-color: #007ACC;
@@ -139,9 +135,6 @@
 .list-cell:hover {
     -fx-background-color: rgb(221, 221, 221);
 }
-.list-cell:selected {
-    /* -fx-background-color: rgb(221, 221, 221); */
-}
 
 .list-cell:selected{
     -fx-border-width:4;
@@ -196,9 +189,6 @@
 .button:default:hover {
     -fx-background-color: rgb(16, 110, 190);
 }
-
-.button:default:focused {}
-
 
 /* CheckBox */
 .check-box {
@@ -280,9 +270,6 @@
     -fx-border-width: 2;
 }
 
-.text-area:hover {
-}
-
 .text-area:focused {
     -fx-border-color: #007ACC;
 }
@@ -339,12 +326,6 @@
     -fx-background-color: #bdbdbd;
 }
 
-.scroll-bar:vertical .increment-arrow,
-.scroll-bar:vertical .decrement-arrow,
-.scroll-bar:horizontal .increment-arrow,
-.scroll-bar:horizontal .decrement-arrow {
-}
-
 .scroll-bar:horizontal .thumb,
 .scroll-bar:vertical .thumb {
     -fx-background-color: #7c7c7c;
@@ -380,9 +361,6 @@
 
 .menu-item:hover {
     -fx-background-color: #c7c7c7;
-}
-
-.menu-item:pressed {
 }
 
 .context-menu {
@@ -435,13 +413,6 @@
 .slider:focused .track {
     -fx-background-color: #4da9e7;
 }
-
-.slider .thumb:hover {
-}
-
-.slider .thumb:pressed {
-}
-
 
 /* TreeView */
 .tree-view .scroll-bar {
@@ -681,10 +652,6 @@
     -fx-background-color: white;
 }
 
-.table-view .column-drag-header {
-}
-
-
 /* Tooltip */
 .tooltip {
     -fx-background-radius: 0;
@@ -733,9 +700,6 @@
     -fx-border-style: solid solid none;
     /* -fx-border-color: #7a7a7a #7a7a7a #7a7a7a #7a7a7a; */
 }
-.spinner .decrement-arrow-button {
-}
-
 
 .spinner .increment-arrow-button:hover,
 .spinner .decrement-arrow-button:hover {
@@ -895,9 +859,6 @@
     -fx-background-color: rgb(243, 242, 241);
 }
 
-.menu-button:focused {
-}
-
 .def-men{
     -fx-background-color: rgb(18, 122, 214) !important;
     -fx-border-width: 0px !important;
@@ -1052,9 +1013,6 @@
     -fx-min-width: 150px;
 }
 
-.split-menu-button .context-menu .menu-item .label {
-}
-
 .spl-de>.label{
     -fx-background-color:  #c7c7c7;
     -fx-border-radius: 2 !important;
@@ -1157,9 +1115,6 @@
 
 .btn-de:default:hover {
     -fx-background-color: rgb(52, 142, 216);
-}
-
-.btn-de:default:focused {
 }
 
 .btn-de:default:pressed {
