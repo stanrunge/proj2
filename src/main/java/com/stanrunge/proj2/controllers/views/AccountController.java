@@ -16,7 +16,7 @@ import org.springframework.stereotype.Component;
 public class AccountController {
 
     User currentUser;
-    UserController userController;
+    UserController userController = JavaFXApplication.getUserController();
 
     @FXML
     private void initialize() {

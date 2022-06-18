@@ -1,5 +1,6 @@
 package com.stanrunge.proj2;
 
+import com.stanrunge.proj2.controllers.data.UserController;
 import com.stanrunge.proj2.data.User;
 import com.stanrunge.proj2.events.StageReadyEvent;
 import javafx.application.Application;
@@ -22,6 +23,16 @@ public class JavaFXApplication extends Application {
 
     public static void setLoggedInUser(User loggedInUser) {
         JavaFXApplication.loggedInUser = loggedInUser;
+    }
+
+    private static UserController userController;
+
+    public static UserController getUserController() {
+        return userController;
+    }
+
+    public static void setUserController(UserController userController) {
+        JavaFXApplication.userController = userController;
     }
 
     @Override

@@ -1,5 +1,6 @@
 package com.stanrunge.proj2.controllers.views;
 
+import com.stanrunge.proj2.JavaFXApplication;
 import com.stanrunge.proj2.controllers.data.UserController;
 import com.stanrunge.proj2.data.User;
 import javafx.collections.ObservableList;
@@ -22,6 +23,7 @@ public class LeaderboardController {
 
     @FXML
     private void initialize() {
+        userController = JavaFXApplication.getUserController();
         users = userController.getUsers();
         leaderboardTable.setItems((ObservableList<User>) users);
     }

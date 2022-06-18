@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.stanrunge.proj2.controllers.views.RewardsController"
-            prefHeight="400.0" prefWidth="600.0">
-    <fx:include fx:id="menu" source="components/MenuView.fxml"></fx:include>
+<AnchorPane prefHeight="400.0" prefWidth="600.0" stylesheets="@../../css/styles.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.stanrunge.proj2.controllers.views.RewardsController">
+    <fx:include fx:id="menu" source="components/MenuView.fxml" />
+   <TableView layoutY="61.0" prefHeight="341.0" prefWidth="600.0">
+     <columns>
+       <TableColumn prefWidth="370.0" text="Name" />
+       <TableColumn prefWidth="123.0" text="Cost" />
+         <TableColumn prefWidth="106.0" text="Claim" />
+     </columns>
+   </TableView>
 
 </AnchorPane>

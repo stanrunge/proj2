@@ -24,4 +24,9 @@ public class UserController {
     public Iterable<User> getUsers() {
         return userRepository.findAll();
     }
+
+    @PutMapping("/")
+    public void updateUser(User user) {
+        userRepository.save(user);
+    }
 }
