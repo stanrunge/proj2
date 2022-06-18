@@ -1,6 +1,9 @@
 package com.stanrunge.proj2.controllers.views;
 
+import com.stanrunge.proj2.JavaFXApplication;
+import com.stanrunge.proj2.controllers.data.UserController;
 import com.stanrunge.proj2.data.User;
+import com.stanrunge.proj2.repositories.UserRepository;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -13,9 +16,11 @@ import org.springframework.stereotype.Component;
 public class AccountController {
 
     User currentUser;
+    UserController userController;
 
-    public void setCurrentUser(User currentUser) {
-        this.currentUser = currentUser;
+    @FXML
+    private void initialize() {
+        currentUser = JavaFXApplication.getLoggedInUser();
         currentPointsLabel.setText("Current points: " + currentUser.getPoints());
         emailLabel.setText("Email: " + currentUser.getEmail());
         usernameLabel.setText("Username: " + currentUser.getUsername());
@@ -52,8 +57,17 @@ public class AccountController {
 
     @FXML
     private void changePassword() {
+        if (!isSamePassword()) {
+            errorChangePasswordLabel.setText("Passwords do not match");
+            return;
+        }
+
         String hashedPassword = new BCryptPasswordEncoder().encode(changePasswordField.getText());
         currentUser.setHashedPassword(hashedPassword);
+
+        userController.updateUser(currentUser);
+
+        System.out.println("Changed password to: " + hashedPassword);
     }
 
     private boolean isSamePassword() {
