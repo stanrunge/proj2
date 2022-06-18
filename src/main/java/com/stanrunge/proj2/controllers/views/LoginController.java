@@ -44,7 +44,7 @@ public class LoginController {
     private TextField usernameField;
 
     public LoginController(UserRepository userRepository, ApplicationContext applicationContext) {
-        JavaFXApplication.setUserController(new UserController(userRepository));;
+        JavaFXApplication.setUserController(new UserController(userRepository));
         this.userController = JavaFXApplication.getUserController();
         this.applicationContext = applicationContext;
         sceneSwitcher = new SceneSwitcher(applicationContext);
