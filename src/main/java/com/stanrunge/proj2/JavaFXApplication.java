@@ -1,5 +1,6 @@
 package com.stanrunge.proj2;
 
+import com.stanrunge.proj2.data.User;
 import com.stanrunge.proj2.events.StageReadyEvent;
 import javafx.application.Application;
 import javafx.application.HostServices;
@@ -13,6 +14,15 @@ import org.springframework.context.support.GenericApplicationContext;
 public class JavaFXApplication extends Application {
 
     private ConfigurableApplicationContext context;
+    private static User loggedInUser;
+
+    public static User getLoggedInUser() {
+        return loggedInUser;
+    }
+
+    public static void setLoggedInUser(User loggedInUser) {
+        JavaFXApplication.loggedInUser = loggedInUser;
+    }
 
     @Override
     public void init() {

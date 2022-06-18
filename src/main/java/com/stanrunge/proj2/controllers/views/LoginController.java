@@ -1,5 +1,6 @@
 package com.stanrunge.proj2.controllers.views;
 
+import com.stanrunge.proj2.JavaFXApplication;
 import com.stanrunge.proj2.SceneSwitcher;
 import com.stanrunge.proj2.repositories.UserRepository;
 import com.stanrunge.proj2.controllers.data.UserController;
@@ -63,6 +64,7 @@ public class LoginController {
         Iterable<User> users = userController.getUsers();
         for (User user : users) {
             if (user.getUsername().equals(username) && encoder.matches(passwordField.getText(), user.getHashedPassword())) {
+                JavaFXApplication.setLoggedInUser(user);
                 Stage stage = (Stage) logInButton.getScene().getWindow();
                 sceneSwitcher.switchScene(stage, "/fxml/views/DashboardView.fxml");
                 return;
