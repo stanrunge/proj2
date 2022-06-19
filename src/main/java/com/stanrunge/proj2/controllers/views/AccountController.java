@@ -26,6 +26,7 @@ public class AccountController {
         currentPointsLabel.setText("Current points: " + currentUser.getPoints());
         emailLabel.setText("Email: " + currentUser.getEmail());
         usernameLabel.setText("Username: " + currentUser.getUsername());
+        errorChangePasswordLabel.setText("");
     }
 
     @FXML
@@ -49,16 +50,6 @@ public class AccountController {
     @FXML
     private Button changePasswordButton;
 
-    @FXML
-    private FileChooser fileChooser;
-
-    @FXML
-    private ImageView profilePictureImageView;
-
-    @FXML
-    private void changeProfilePicture() {
-
-    }
 
     @FXML
     private void changePassword() {

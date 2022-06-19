@@ -10,7 +10,6 @@
       <Label text="Leaderboard:" />
       <TableView fx:id="leaderboardTable" layoutY="61.0" prefHeight="340.0" prefWidth="600.0">
         <columns>
-            <TableColumn fx:id="profilePictureColumn" prefWidth="99.0" text="Profile picture" />
           <TableColumn fx:id="usernameColumn" prefWidth="243.0" text="Username" />
           <TableColumn fx:id="pointsColumn" minWidth="7.0" prefWidth="257.0" text="Points" />
         </columns>
