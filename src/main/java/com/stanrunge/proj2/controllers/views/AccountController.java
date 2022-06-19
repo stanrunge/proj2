@@ -16,11 +16,12 @@ import org.springframework.stereotype.Component;
 public class AccountController {
 
     User currentUser;
-    UserController userController = JavaFXApplication.getUserController();
+    UserController userController;
 
     @FXML
     private void initialize() {
         currentUser = JavaFXApplication.getLoggedInUser();
+        userController = JavaFXApplication.getUserController();
         currentPointsLabel.setText("Current points: " + currentUser.getPoints());
         emailLabel.setText("Email: " + currentUser.getEmail());
         usernameLabel.setText("Username: " + currentUser.getUsername());
