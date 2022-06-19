@@ -67,8 +67,7 @@ public class AccountController {
         currentUser.setHashedPassword(hashedPassword);
 
         userController.updateUser(currentUser);
-
-        System.out.println("Changed password to: " + hashedPassword);
+        errorChangePasswordLabel.setText("Password changed");
     }
 
     private boolean isSamePassword() {
