@@ -18,32 +18,34 @@ public class LeaderboardController {
     ObservableList<User> userList;
 
     @FXML
-    TableView leaderboardTable;
+    TableView<User> leaderboardTable;
 
     @FXML
-    TableColumn profilePictureColumn;
+    TableColumn<User, String> profilePictureColumn;
 
     @FXML
-    TableColumn usernameColumn;
+    TableColumn<User, String> usernameColumn;
 
     @FXML
-    TableColumn pointsColumn;
+    TableColumn<User, String> pointsColumn;
 
     @FXML
     private void initialize() {
         userController = JavaFXApplication.getUserController();
         users = userController.getUsers();
+        userList = leaderboardTable.getItems();
         for(User user : users) {
             userList.add(user);
             System.out.println(user.getUsername());
         }
 
         leaderboardTable.setEditable(true);
+
         fillTable();
     }
 
     private void fillTable() {
-        profilePictureColumn.setCellValueFactory(new PropertyValueFactory<User, String>("profilePicture"));
+        profilePictureColumn.setCellValueFactory(new PropertyValueFactory<User, String>("profilePicURL"));
         usernameColumn.setCellValueFactory(new PropertyValueFactory<User, String>("username"));
         pointsColumn.setCellValueFactory(new PropertyValueFactory<User, String>("points"));
     }
