@@ -1,6 +1,7 @@
 package com.stanrunge.proj2.controllers.views;
 
 import com.stanrunge.proj2.JavaFXApplication;
+import com.stanrunge.proj2.ProfilePicture;
 import com.stanrunge.proj2.controllers.data.UserController;
 import com.stanrunge.proj2.data.User;
 import javafx.collections.ObservableList;
@@ -8,6 +9,8 @@ import javafx.fxml.FXML;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import org.springframework.stereotype.Component;
 
 import java.util.Collections;
@@ -23,7 +26,7 @@ public class LeaderboardController {
     TableView<User> leaderboardTable;
 
     @FXML
-    TableColumn<User, String> profilePictureColumn;
+    TableColumn<ProfilePicture, ImageView> profilePictureColumn;
 
     @FXML
     TableColumn<User, String> usernameColumn;
@@ -38,7 +41,6 @@ public class LeaderboardController {
         userList = leaderboardTable.getItems();
         for(User user : users) {
             userList.add(user);
-            System.out.println(user.getUsername());
         }
 
         leaderboardTable.setEditable(true);
@@ -51,8 +53,8 @@ public class LeaderboardController {
     }
 
     private void fillTable() {
-        profilePictureColumn.setCellValueFactory(new PropertyValueFactory<User, String>("profilePicURL"));
-        usernameColumn.setCellValueFactory(new PropertyValueFactory<User, String>("username"));
-        pointsColumn.setCellValueFactory(new PropertyValueFactory<User, String>("points"));
+        profilePictureColumn.setCellValueFactory(new PropertyValueFactory<ProfilePicture, ImageView>("profilePicURL"));
+        usernameColumn.setCellValueFactory(new PropertyValueFactory<>("username"));
+        pointsColumn.setCellValueFactory(new PropertyValueFactory<>("points"));
     }
 }

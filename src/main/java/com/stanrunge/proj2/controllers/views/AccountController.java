@@ -8,6 +8,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
+import javafx.scene.image.ImageView;
 import javafx.stage.FileChooser;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Component;
@@ -50,6 +51,9 @@ public class AccountController {
 
     @FXML
     private FileChooser fileChooser;
+
+    @FXML
+    private ImageView profilePictureImageView;
 
     @FXML
     private void changeProfilePicture() {

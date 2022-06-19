@@ -4,6 +4,7 @@ import com.stanrunge.proj2.events.StageReadyEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.ApplicationContext;
@@ -37,6 +38,7 @@ public class StageListener implements ApplicationListener<StageReadyEvent> {
             Scene scene = new Scene(root, 600, 600);
             stage.setScene(scene);
             stage.setTitle(applicationTitle);
+            stage.getIcons().add(new Image("/images/icon.png"));
             stage.show();
         } catch (Exception e) {
             e.printStackTrace();

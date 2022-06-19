@@ -10,24 +10,29 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" stylesheets="@../../css/styles.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.stanrunge.proj2.controllers.views.AccountController">
    <children>
-      <Label fx:id="usernameLabel" layoutX="64.0" layoutY="18.0" text="USERNAME" />
-      <Label fx:id="emailLabel" layoutX="64.0" layoutY="42.0" text="EMAIL" />
-      <Label fx:id="currentPointsLabel" layoutX="14.0" layoutY="90.0" text="Current points: " />
-      <Label layoutX="403.0" layoutY="81.0" text="Change password:" />
-      <PasswordField fx:id="changePasswordField" layoutX="403.0" layoutY="98.0" />
-      <Label layoutX="403.0" layoutY="141.0" text="Re-enter changed password:" />
-      <PasswordField fx:id="reEnterChangedPasswordField" layoutX="403.0" layoutY="158.0" />
-      <Button fx:id="changePasswordButton" layoutX="403.0" layoutY="206.0" mnemonicParsing="false" onAction="#changePassword" text="Change password" />
-      <Label fx:id="errorChangePasswordLabel" layoutX="403.0" layoutY="33.0" text="errorLabel" textFill="RED">
-         <font>
-            <Font name="System Bold" size="12.0" />
-         </font></Label>
-      <ImageView fx:id="profilePicViewer" fitHeight="64.0" fitWidth="64.0" layoutX="19.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../images/profile_pic.jpg" />
-         </image>
-      </ImageView>
-      <Button fx:id="changeProfilePictureButton" layoutX="16.0" layoutY="354.0" mnemonicParsing="false" onAction="#changeProfilePicture" text="Change profile picture" />
-      <fx:include fx:id="menu" source="components/MenuView.fxml"></fx:include>
+      <fx:include fx:id="menu" source="components/MenuView.fxml" />
+      <AnchorPane layoutX="14.0" layoutY="18.0">
+         <children>
+            <Label fx:id="usernameLabel" layoutX="50.0" text="USERNAME" />
+            <Label fx:id="emailLabel" layoutX="50.0" layoutY="24.0" text="EMAIL" />
+            <Label fx:id="currentPointsLabel" layoutY="72.0" text="Current points: " />
+            <Label layoutX="389.0" layoutY="63.0" text="Change password:" />
+            <PasswordField fx:id="changePasswordField" layoutX="389.0" layoutY="80.0" />
+            <Label layoutX="389.0" layoutY="123.0" text="Re-enter changed password:" />
+            <PasswordField fx:id="reEnterChangedPasswordField" layoutX="389.0" layoutY="140.0" />
+            <Button fx:id="changePasswordButton" layoutX="389.0" layoutY="188.0" mnemonicParsing="false" onAction="#changePassword" text="Change password" />
+            <Label fx:id="errorChangePasswordLabel" layoutX="389.0" layoutY="15.0" text="errorLabel" textFill="RED">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="profilePicViewer" fitHeight="64.0" fitWidth="64.0" layoutX="5.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/profile_pic.jpg" />
+               </image>
+            </ImageView>
+            <Button fx:id="changeProfilePictureButton" layoutX="2.0" layoutY="336.0" mnemonicParsing="false" onAction="#changeProfilePicture" text="Change profile picture" />
+         </children>
+      </AnchorPane>
    </children>
 </AnchorPane>

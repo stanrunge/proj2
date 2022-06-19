@@ -1,12 +1,13 @@
 package com.stanrunge.proj2.controllers.data;
 
+import com.stanrunge.proj2.data.Reward;
 import com.stanrunge.proj2.repositories.UserRepository;
 import com.stanrunge.proj2.data.User;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/")
+@RequestMapping("/users/")
 public class UserController {
     private final UserRepository userRepository;
 
@@ -29,4 +30,5 @@ public class UserController {
     public void updateUser(User user) {
         userRepository.save(user);
     }
+
 }

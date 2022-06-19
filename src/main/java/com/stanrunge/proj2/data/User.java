@@ -1,5 +1,8 @@
 package com.stanrunge.proj2.data;
 
+import com.stanrunge.proj2.JavaFXApplication;
+import com.stanrunge.proj2.controllers.data.UserController;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -74,5 +77,14 @@ public class User {
 
     public void setPoints(Integer points) {
         this.points = points;
+    }
+
+    public boolean redeemReward(Reward reward) {
+        if (points >= reward.getCost()) {
+            points -= reward.getCost();
+            JavaFXApplication.getUserController().updateUser(this);
+            return true;
+        }
+        return false;
     }
 }

@@ -1,5 +1,6 @@
 package com.stanrunge.proj2;
 
+import com.stanrunge.proj2.controllers.data.RewardController;
 import com.stanrunge.proj2.controllers.data.UserController;
 import com.stanrunge.proj2.data.User;
 import com.stanrunge.proj2.events.StageReadyEvent;
@@ -18,6 +19,15 @@ public class JavaFXApplication extends Application {
     private static User loggedInUser;
     private static SceneSwitcher sceneSwitcher;
     private static UserController userController;
+    private static RewardController rewardController;
+
+    public static RewardController getRewardController() {
+        return rewardController;
+    }
+
+    public static void setRewardController(RewardController rewardController) {
+        JavaFXApplication.rewardController = rewardController;
+    }
 
     public static User getLoggedInUser() {
         return loggedInUser;
