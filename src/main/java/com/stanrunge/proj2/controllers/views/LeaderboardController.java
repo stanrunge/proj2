@@ -10,6 +10,8 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import org.springframework.stereotype.Component;
 
+import java.util.Collections;
+
 @Component
 public class LeaderboardController {
 
@@ -42,6 +44,10 @@ public class LeaderboardController {
         leaderboardTable.setEditable(true);
 
         fillTable();
+
+        // Sort the table by points
+        leaderboardTable.getSortOrder().add(pointsColumn);
+        Collections.reverse(leaderboardTable.getItems());
     }
 
     private void fillTable() {
