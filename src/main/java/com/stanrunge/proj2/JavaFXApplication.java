@@ -16,6 +16,8 @@ public class JavaFXApplication extends Application {
 
     private ConfigurableApplicationContext context;
     private static User loggedInUser;
+    private static SceneSwitcher sceneSwitcher;
+    private static UserController userController;
 
     public static User getLoggedInUser() {
         return loggedInUser;
@@ -25,14 +27,20 @@ public class JavaFXApplication extends Application {
         JavaFXApplication.loggedInUser = loggedInUser;
     }
 
-    private static UserController userController;
-
     public static UserController getUserController() {
         return userController;
     }
 
     public static void setUserController(UserController userController) {
         JavaFXApplication.userController = userController;
+    }
+
+    public static SceneSwitcher getSceneSwitcher() {
+        return sceneSwitcher;
+    }
+
+    public static void setSceneSwitcher(SceneSwitcher sceneSwitcher) {
+        JavaFXApplication.sceneSwitcher = sceneSwitcher;
     }
 
     @Override

@@ -1,5 +1,6 @@
 package com.stanrunge.proj2.controllers.components;
 
+import com.stanrunge.proj2.JavaFXApplication;
 import com.stanrunge.proj2.SceneSwitcher;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -18,7 +19,8 @@ public class MenuController {
 
     public MenuController(ApplicationContext applicationContext) {
         this.applicationContext = applicationContext;
-        sceneSwitcher = new SceneSwitcher(applicationContext);
+        JavaFXApplication.setSceneSwitcher(new SceneSwitcher(applicationContext));
+        sceneSwitcher = JavaFXApplication.getSceneSwitcher();
     }
 
     @FXML
