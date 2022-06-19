@@ -9,5 +9,4 @@
          <Button fx:id="logOutButton" layoutX="273.0" layoutY="284.0" mnemonicParsing="false" onAction="#logOut" text="Logout" />
       </children>
    </AnchorPane>
-    <fx:include fx:id="menu" source="components/MenuView.fxml" />
-</AnchorPane>
+   <fx:include fx:id="menu" source="components/MenuView.fxml" translateX="75.0" translateY="340.0" /></AnchorPane>
